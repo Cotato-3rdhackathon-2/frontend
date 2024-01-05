@@ -30,7 +30,7 @@ struct FarewellTokenResponseModel: Decodable {
 public struct FarewellTokenObject {
     
     // TODO: 서버 스키마에따라 변경
-    var accessToken: String
-    var refreshToken: String
+    public var accessToken: String
+    public var refreshToken: String
     
 }

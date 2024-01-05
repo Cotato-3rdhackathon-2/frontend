@@ -19,6 +19,7 @@ private let kakaoNativeAppKey = getKakaoAppKey()
 let project = Project(name: "\(appName)",
                       packages: [
                         .local(path: "\(packagePath)/GlobalResources"),
+                        .local(path: "\(packagePath)/ScreenUI"),
                       ],
                       settings: Settings.settings(configurations: makeConfiguration()),
                       targets: [
@@ -52,7 +53,8 @@ let project = Project(name: "\(appName)",
                                 "\(targetPath)/FarewellUI/Resources/**",
                               ],
                               dependencies: [
-                                .package(product: "GlobalResources")
+                                .package(product: "GlobalResources"),
+                                .package(product: "ScreenUI")
                               ],
                               settings: baseSettings()
                           ),

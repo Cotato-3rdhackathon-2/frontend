@@ -11,7 +11,7 @@ struct MyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentScreen()
                 .onOpenURL { url in
                     
                     KakaoLoginManager.shared.completeSocialLogin(url: url)
